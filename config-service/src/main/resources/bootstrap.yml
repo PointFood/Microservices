@@ -1,4 +1,3 @@
-
 server:
   port: 8081
 
@@ -7,7 +6,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/PointFood/Microservices
+          uri: https://github.com/upc-is/fas-spring-micro-ms.git
           searchPaths: config-data
           username: ${GIT_USER}
           password: ${GIT_PASSWORD}

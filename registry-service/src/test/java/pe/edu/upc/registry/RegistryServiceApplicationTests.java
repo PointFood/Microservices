@@ -1,4 +1,4 @@
-package pe.edu.upc.registryservice;
+package pe.edu.upc.registry;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
