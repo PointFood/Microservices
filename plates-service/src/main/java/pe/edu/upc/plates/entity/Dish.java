@@ -32,7 +32,7 @@ public class Dish implements Serializable {
     @Column(name = "price", precision = 5, scale =  2, nullable = false)
     private double price;
 
-    @Column(name = "extra_id")
+    @Column(name = "restaurant_id")
     private Long RestaurantId;
     @Transient
     private Restaurant restaurant;

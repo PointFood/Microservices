@@ -1,10 +1,19 @@
 package pe.edu.upc.plates.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
+import org.springframework.data.annotation.CreatedDate;
+
+import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
+
 
 @Data
-public class Order {
+
+public class Order implements Serializable {
+
     private Long id;
     private Client client;
     private Date registeredAt;
@@ -12,5 +21,5 @@ public class Order {
     private boolean delivery;
     private String address;
     private double total;
-    private Status status;
+    private String status;
 }

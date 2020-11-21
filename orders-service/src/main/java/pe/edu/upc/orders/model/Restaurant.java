@@ -1,10 +1,7 @@
 package pe.edu.upc.orders.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
 import java.util.List;
 
 @Data

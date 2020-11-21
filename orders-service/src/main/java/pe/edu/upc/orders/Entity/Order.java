@@ -1,5 +1,6 @@
 package pe.edu.upc.orders.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -51,8 +52,6 @@ public class Order implements Serializable {
     @Column(name = "total", precision = 6, scale =  2, nullable = false)
     private double total;
 
-    @JoinColumn(name="status_id", nullable = false)
-    @ManyToOne(fetch=FetchType.LAZY)
-    @JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
-    private Status status;
+    @Column(name = "status", length = 15, nullable = false)
+    private String status;
 }

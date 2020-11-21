@@ -7,12 +7,10 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import pe.edu.upc.orders.model.Dish;
-import pe.edu.upc.orders.model.Extra;
+import pe.edu.upc.orders.model.DishExtra;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 import java.io.Serializable;
-import java.util.List;
 
 @Data
 @Entity
@@ -27,19 +25,14 @@ public class OrderDetail implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "order_id", nullable = false)
-    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+    @JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
     @JsonIgnore
     private Order order;
 
-    @Column(name = "dish_id")
+    @Column(name = "dish_id", nullable = false)
     private Long dishId;
     @Transient
     private Dish dish;
-
-    @Column(name = "extra_id")
-    private Long extraId;
-    @Transient
-    private Extra extras;
 
     @Column(name = "total", precision = 6, scale =  2, nullable = false)
     private double subTotal;

@@ -6,7 +6,9 @@ import java.util.Date;
 import java.util.List;
 
 @Data
+
 public class Client {
+
     private Long id;
     private String name;
     private String phone;

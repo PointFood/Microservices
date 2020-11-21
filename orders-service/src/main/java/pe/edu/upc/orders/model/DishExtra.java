@@ -1,13 +1,12 @@
-package pe.edu.upc.plates.entity;
+package pe.edu.upc.orders.model;
 
 import lombok.Data;
-import pe.edu.upc.plates.model.OrderDetail;
 
-import java.io.Serializable;
+import pe.edu.upc.orders.Entity.OrderDetail;
 
 @Data
 
-public class DishExtra implements Serializable {
+public class DishExtra{
 
     private Long id;
     private OrderDetail orderDetail;
